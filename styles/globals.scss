@@ -1,0 +1,26 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    text-align: center;
+}
+
+#wrapper{
+    --headerColor: 54;
+    --footerColor: 105;
+    --TrainingLayoutColor: 54;
+    --ButtonsColor: 220;
+}
+
+a {
+    padding: 10px;
+    font-size: 2rem;
+    color: hsla(100, 10%, 10%, 0.9);
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}

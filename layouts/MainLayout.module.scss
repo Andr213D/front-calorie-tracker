@@ -1,0 +1,12 @@
+.MainLayout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    background: hsla(54, 100%, 92%, 1);;
+}

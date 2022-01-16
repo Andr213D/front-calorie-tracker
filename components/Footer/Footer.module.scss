@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    background: hsla(var(--footerColor), 65%, 40%, 0.7);
+
+    border-top: 1px solid hsla(var(--footerColor), 45%, 25%, 1);
+}
