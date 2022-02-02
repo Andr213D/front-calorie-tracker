@@ -19,7 +19,7 @@ import Link from "next/link";
                 </a>
             </Link>
             |
-            <Link href="/trainingRoom">
+            <Link href="/training">
                 <a>
                     Training room
                 </a>

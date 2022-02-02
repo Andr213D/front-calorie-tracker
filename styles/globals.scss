@@ -12,15 +12,18 @@ body {
     --footerColor: 105;
     --TrainingLayoutColor: 54;
     --ButtonsColor: 220;
-}
 
+    --Popup: 60;
+    --ConfurmPopup: 180;
+
+
+}
 a {
     padding: 10px;
     font-size: 2rem;
     color: hsla(100, 10%, 10%, 0.9);
     text-decoration: none;
 }
-
 * {
     box-sizing: border-box;
 }

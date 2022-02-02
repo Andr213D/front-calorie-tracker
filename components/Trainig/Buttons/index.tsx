@@ -14,9 +14,15 @@ const Buttons: React.FC = () =>{
                 <SimpleButton/>
             </div>
             <p>Select buttons</p>
-            <div>
-                <SelectButton/>
+            <div className = {styles.SelectButtonDiv}>
+                <div>
+                    <SelectButton/>
+                </div>
+                <div>
+                    <SelectButton/>
+                </div>
             </div>
+
         </div>
     )
 }

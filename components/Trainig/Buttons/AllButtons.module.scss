@@ -1,28 +1,4 @@
 .Buttons{
-    button{
-        width: 150px;
-        height: 50px;
-
-        margin: 10px;
-
-        border-radius: 15px;
-        font-size: 1.2rem;
-
-        color: hsla(var(--ButtonsColor), 90%, 10%, 1);
-        border: 2px solid hsla(var(--ButtonsColor), 75%, 35%, 0.6);
-        background: hsla(var(--ButtonsColor), 50%, 75%, 1);
-
-        transition: 0.2s;
-        cursor: pointer;
-
-        &:hover{
-            background: hsla(var(--ButtonsColor), 60%, 65%, 1)
-        }
-        &:active{
-            color: hsla(var(--ButtonsColor), 20%, 90%, 1);
-            background: hsla(var(--ButtonsColor), 60%, 50%, 1)
-        }
-    }
     .SimpleButton{
         &:hover{
             filter: invert(0);
@@ -31,32 +7,10 @@
             filter: invert(1);
         }
     }
-    .SelectButtonWrapper{
-        position: absolute;
-
+    .SelectButtonDiv{
+        width: 300px;
+        height: 250px;
         display: flex;
-        flex-direction: column;
-
-        border: 2px solid hsla(var(--ButtonsColor), 75%, 35%, 0.6) ;
-        border-radius: 15px;
-
-        overflow: hidden;
-        .SelectButton{
-            width: 200px;
-            border-radius: 10px 10px 0 0;
-            border: 0;
-            margin: 0;
-        }
-        hr{
-            margin:0;
-            border: 1px solid hsla(var(--ButtonsColor), 75%, 25%, 0.6) ;
-        }
-        .SelectedButton{
-            width: 200px;
-            border-radius: 0;
-            border: 0;
-            margin: 0;
-        }
+        justify-content: space-between;
     }
-
 }

@@ -1,42 +1,44 @@
 import React from "react";
-import styles from "./AllButtons.module.scss"
+import styles from "./SelectButton.module.scss"
 
 const nameSelectButton: string[] = ["Mass", "Effect", "Anthology"]
-
-
-
 
 const SelectButton: React.FC = () =>{
 
     const [clickSelect, setClickSelect] = React.useState(false)
 
-    const visibilitySelectButton = ( ParentNode:  HTMLElement)  => {
-        console.log(ParentNode.id)
-        if (ParentNode !== null){
-            if( ParentNode.id === "wrapper" ){
-                setClickSelect(!clickSelect)
-            } else {
-                visibilitySelectButton(ParentNode.parentNode as HTMLElement)
-            }
+    const closeOutButton = () => {
+        if (!clickSelect) {
+            setClickSelect(true)
+            addEventListener("click", visibilitySelectButton)
         } else {
-            setClickSelect(!clickSelect)
+            setClickSelect(false)
+            removeEventListener("click", visibilitySelectButton)
+        }
+    }
+
+    const visibilitySelectButton = (event: MouseEvent) => {
+        const eventTarget =event.target as HTMLElement
+        if (eventTarget.className !== "SelectButton_SelectButton__Q_5Mi") {
+            sortParentNode(eventTarget.parentNode as HTMLElement)
+        }
+    }
+
+    const sortParentNode = ( ParentNode:  HTMLElement | null)  => {
+        if (ParentNode === null){
+            console.log("Null ParentNode")
+        } else if( ParentNode.id === "wrapper" ){
+            setClickSelect(false)
+            document.removeEventListener("click", visibilitySelectButton)
+        } else {
+            sortParentNode(ParentNode.parentNode as HTMLElement)
         }
     }
 
     return(
         <div className={styles.SelectButtonWrapper}>
             <button className={styles.SelectButton}
-                    onClick={ (e) => {
-                        setClickSelect(!clickSelect)
-                        const eventTarget: HTMLElement =e.target as HTMLElement
-                        visibilitySelectButton(eventTarget.parentNode as HTMLElement)
-                        // if (eventTarget.className !== "AllButtons_SelectButton__R1SMf"){
-                        //     console.log(eventTarget.id)
-                        //     visibilitySelectButton(eventTarget.parentNode as HTMLElement)
-                        // } else {
-                        //     console.log("Ничего не получилось")
-                        // }
-                    }}
+                    onClick={ closeOutButton }
             >
                 Drop-down list
             </button>
