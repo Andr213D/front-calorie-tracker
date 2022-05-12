@@ -1,0 +1,14 @@
+.UserLayoutForm{
+    width: 90%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    background: hsl(174, 100%, 40%);
+}

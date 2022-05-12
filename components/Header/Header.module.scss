@@ -1,10 +1,52 @@
 .header{
-    width: 100%;
+    width: 80%;
     height: 100px;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
+    .titleImage{
+        position: absolute;
+    }
+    .SunHeader{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
 
-    background: hsla(var(--headerColor), 100%, 92%, 1);
+        border-radius: 0 0 0 100px;
+
+        background: hsl(21, 100%, 50%,0.3 );
+        filter: blur(4px);
+        .SunRays{
+            margin: 0 10px;
+            width: 50px;
+            height: 50px;
+
+            border-radius: 0 0 0 80px;
+
+            background: hsl(21, 100%, 50%, 1)
+        }
+    }
+    .titleName{
+        z-index: 1;
+    }
+    h1{
+        margin: 0;
+    }
+}
+
+@media(min-width: 1220px){
+    .header{
+        .SunHeader {
+            margin: 20px;
+            border-radius: 60px;
+            .SunRays {
+                margin: 5px 5px;
+                border-radius: 50px;
+                background: hsl(60, 100%, 50%)
+            }
+        }
+    }
 }

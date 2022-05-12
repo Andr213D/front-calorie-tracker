@@ -1,10 +1,14 @@
 import '../styles/globals.scss'
+import React from 'react'
+
 import type { AppProps } from 'next/app'
 import Head from "next/head";
+
+import MainLayout from "../layouts/MainLayout";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import PageLayout from "../layouts/PageLayout";
 
-import React from 'react'
 
 function App({ Component, pageProps }: AppProps) {
     return (
@@ -12,15 +16,21 @@ function App({ Component, pageProps }: AppProps) {
             <Head>
                 <title>Calorie Tracker</title>
                 <meta name="description" content="Calorie tracker for needed in calculate your consumption eat and change weight in addiction of calorie" />
-                <link rel="icon" href="favicon.svg" />
+                <link rel="icon" href="./../public/favicon.svg" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap"
+                    rel="stylesheet"
+                />
             </Head>
-            <React.StrictMode>
-                <div id="wrapper">
+            <div id="wrapper">
+                <MainLayout>
                     <Header/>
-                    <Component {...pageProps} />
+                    <PageLayout>
+                        <Component {...pageProps} />
+                    </PageLayout>
                     <Footer/>
-                </div>
-            </React.StrictMode>
+                </MainLayout>
+            </div>
         </>
     )
 }

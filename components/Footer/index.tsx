@@ -12,24 +12,27 @@ import Link from "next/link";
                     Home
                 </a>
             </Link>
-            |
-            <Link href="/registration">
-                <a>
-                    Registration
-                </a>
-            </Link>
-            |
-            <Link href="/training">
-                <a>
-                    Training room
-                </a>
-            </Link>
             <Image
                 src="/capsuleBread.svg"
                 alt="Logo"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
             />
+            <Link href={"/registration"}>
+                <a>
+                    Sing in
+                </a>
+            </Link>
+            <Link href={"/account"}>
+                <a>
+                    Account
+                </a>
+            </Link>
+            <Link href={"/products"}>
+                <a>
+                    Products
+                </a>
+            </Link>
         </footer>
     )
 }

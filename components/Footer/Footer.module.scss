@@ -9,7 +9,7 @@
     align-items: center;
     flex: 1;
 
-    background: hsla(var(--footerColor), 65%, 40%, 0.95);
+    background: hsla(var(--LayoutColor), 100%, 75%, 0.95);
 
-    border-top: 1px solid hsla(var(--footerColor), 45%, 25%, 1);
+    border-top: 1px solid hsla(var(--LayoutColor), 100%, 40%, 1);
 }

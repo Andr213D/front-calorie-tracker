@@ -1,0 +1,28 @@
+.Registration{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .rulesLabelCheckbox{
+        width: 90%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        .rulesCheckbox{
+            width: 30px;
+            height: 30px;
+            margin: 15px;
+        }
+    }
+}
+
+@media(min-width: 1220px){
+    .Registration{
+        .rulesLabelCheckbox{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

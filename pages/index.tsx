@@ -1,21 +1,34 @@
+import React from "react";
 import type { NextPage } from 'next'
-import Link from 'next/link'
-import MainLayout from "../layouts/MainLayout";
+
+import Login from "../components/Login";
+import Link from "next/link";
+import UserLayoutForm from "../layouts/UserLayoutForm.module";
 
 const Home: NextPage = () => {
+
     return (
-        <div>
-            <MainLayout>
-                <h2>
-                    Welcome
-                </h2>
-                <Link href="/registration">
+        <>
+            <h2>
+                Welcome
+            </h2>
+            <div>
+                <h3>
+                    About calorie tracker
+                </h3>
+                <p>
+                    Calorie tracker for needed in calculate your consumption eat and change weight in addiction of calorie
+                </p>
+            </div>
+            <UserLayoutForm>
+                <Login/>
+                <Link href="./registration">
                     <a>
                         Registration
                     </a>
                 </Link>
-            </MainLayout>
-        </div>
+            </UserLayoutForm>
+        </>
     )
 }
 

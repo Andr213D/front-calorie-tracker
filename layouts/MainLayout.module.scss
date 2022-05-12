@@ -1,12 +1,36 @@
 .MainLayout{
     position: absolute;
     width: 100%;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
 
-    background: hsla(54, 100%, 92%, 1);;
+    background: hsla(var(--LayoutColor), 100%, 92%, 1);
+    button{
+        width: 80%;
+        height: 40px;
+        margin: 10px;
+
+        font-family: 'The Girl Next Door', cursive;
+        font-size: 1.2em;
+
+        border: 0;
+        border-radius: 10px;
+
+        background: hsl(120, 96%, 48%);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        &:hover{
+            background: hsl(120, 96%, 38%);
+            cursor: pointer;
+        }
+        &:active{
+            background: hsl(120, 92%, 68%);
+        }
+    }
+    hr{
+        width: 85%;
+        border: 1px solid #000000;
+    }
 }
