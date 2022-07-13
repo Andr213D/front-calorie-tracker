@@ -12,17 +12,17 @@ import Link from "next/link";
                     Home
                 </a>
             </Link>
+            <Link href={"/registration"}>
+                <a>
+                    Sing in
+                </a>
+            </Link>
             <Image
                 src="/capsuleBread.svg"
                 alt="Logo"
                 width={48}
                 height={48}
             />
-            <Link href={"/registration"}>
-                <a>
-                    Sing in
-                </a>
-            </Link>
             <Link href={"/account"}>
                 <a>
                     Account

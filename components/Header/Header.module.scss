@@ -7,6 +7,20 @@
     justify-content: space-around;
     .titleImage{
         position: absolute;
+        .titleImageSWG{
+            width: 100%;
+            height: 100%;
+            .svgLineHeaderInside{
+                stroke: hsl(var(--svgLineHeader), 100%, 95%);
+            }
+            .svgLineHeader{
+                stroke: hsl(var(--svgLineHeader), 100%, 52%);
+            }
+            .svgLineHeaderShadow{
+                stroke: hsl(var(--svgLineHeader), 100%, 55%);
+            }
+        }
+
     }
     .SunHeader{
         position: absolute;

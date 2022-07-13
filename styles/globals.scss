@@ -13,13 +13,6 @@ body {
     width: 100%;
     height: 100%;
     background: hsla(var(--LayoutColor), 100%, 92%, 1);
-
-    --LayoutColor: 54;
-
-    --ButtonsColor: 220;
-
-    --Popup: 60;
-    --ConfurmPopup: 180;
 }
 a{
     padding: 10px;
@@ -32,4 +25,9 @@ a{
 }
 * {
     box-sizing: border-box;
+}
+@media(max-width: 360px){
+    #wrapper{
+        width: 100vh;
+    }
 }

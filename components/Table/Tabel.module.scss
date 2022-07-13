@@ -1,0 +1,55 @@
+.Table{
+    border-collapse: collapse;
+    border: 0 solid hsla(var(--TableHead), 50% ,50%, 1);
+    border-spacing: 0;
+    tr{
+
+        .headTable{
+            border: 2px dashed hsla(var(--TableHead), 50% ,50%, 1);
+            border-left: none;
+            border-right: none;
+            height: 100px;
+            width:150px;
+            min-width:90px;
+            padding: 10px 10px;
+            overflow: hidden;
+            user-select: none;
+            .headTableTextContainer{
+                p{
+                    margin: 0
+                }
+            }
+
+            .checkSortTable{
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                display: inline-block;
+                margin-left: 10px;
+
+                background: hsla(var(--TableHead), 70% ,30%, 1);
+            }
+            &:hover{
+                font-size: 1.1em;
+                cursor: pointer;
+                background: hsla(var(--TableHead), 90% ,80%, 0.3);
+            }
+            &:active{
+                background: hsla(var(--TableHead), 90% ,70%, 0.3);
+            }
+            .checkSortTableUp{
+                border-radius: 0 10px 10px 10px;
+                transform: rotate(45deg);
+                background: hsl(var(--TableCheckSortUp), 70%, 50%)
+            }
+            .checkSortTableDown{
+                border-radius: 10px 0 0 0;
+                transform: rotate(45deg);
+                background: hsl(var(--TableCheckSortDown), 100%, 50%)
+            }
+        }
+        td{
+            border: 0 solid hsla(var(--TableBody), 50% ,50%, 1);
+        }
+    }
+}
